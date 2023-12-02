@@ -39,9 +39,21 @@ Bu şekilde master node'u oluşturmuş oluyorsunuz. Bunun sonucunda size bir tok
 ```
 docker swarm join --token <TOKEN> <private ip of master node> 
 ```
-Bu şekilde worker-node'ların girişini sağlıyorsunuz. 
+Bu şekilde worker-node'ların ekleme işlemini gerçekleştiriyorsunuz. 
+
 
 ```
-docker stack deploy -c docker-compose.yml <uygulama-adi>
+docker node ls
 ```
+Komutuyla aktif node'larınızı görünteleyebilirsiniz.
 
+```
+docker stack deploy -c docker-compose.yml kave
+```
+Komutuyla uygulamayı stack olarak makinelere yönlendirebilirsiniz.
+
+
+```
+docker stack ps kave
+```
+Aktif stackteki containerların durumlarına bakabilirsiniz.

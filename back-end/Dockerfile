@@ -2,4 +2,4 @@ FROM python:3.8
 COPY . /app
 WORKDIR /app
 RUN pip install flask
-CMD ["python", "backend.py"]
+CMD ["python", "app.py"]
